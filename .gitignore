@@ -5,6 +5,7 @@ builds
 key.pem
 .idea
 .DS_STORE
+tusibook
 
 # Sentry Config File
 .env.sentry-build-plugin
