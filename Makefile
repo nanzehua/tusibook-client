@@ -42,7 +42,7 @@ lint-fix:
 	npm run lint:fix
 
 # 打包
-package:
+package: build
 	rm -rf tusibook
 	mkdir -p tusibook
 	cp -r dist tusibook/

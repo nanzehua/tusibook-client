@@ -17,9 +17,9 @@
         </v-btn>
       </template>
     </v-banner>
-    <v-content>
+    <v-main>
       <router-view />
-    </v-content>
+    </v-main>
     <v-footer
       color="blue darken-1"
       app>
