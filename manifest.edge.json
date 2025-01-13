@@ -10,28 +10,23 @@
     "128": "icons/logo_128.png"
   },
 
-  "applications": {
-    "gecko": {
-      "id": "floccus@handmadeideas.org",
-      "strict_min_version": "58.0"
-    }
-  },
-
   "default_locale": "en",
 
-  "permissions": ["*://*/*", "alarms", "bookmarks", "storage", "unlimitedStorage", "tabs", "identity"],
+  "permissions": ["alarms", "bookmarks", "storage", "unlimitedStorage", "tabs", "identity"],
   "optional_permissions": ["history"],
-  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self';",
+  "host_permissions": [
+    "*://*/*"
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self';"
+  },
 
   "options_ui": {
     "page": "dist/html/options.html",
-    "browser_style": false,
-    "chrome_style": false
+    "open_in_tab": false
   },
 
-  "browser_action": {
-    "browser_style": false,
-    "chrome_style": false,
+  "action": {
     "default_icon": {
       "48": "icons/logo.png"
     },
@@ -40,6 +35,7 @@
   },
 
   "background": {
-    "page": "dist/html/background.html"
+    "service_worker": "dist/js/background-script.js",
+    "type": "module"
   }
-}
+} 
